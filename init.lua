@@ -34,7 +34,7 @@ while true do
   gpu.setBackground(0x0000FF)
   gpu.setForeground(0xFFFFFF)
   gpu.set(2, h - 1, "REFRESHING SCREEN...")
-  if (wallpapers) then
+  if (wallpapers == 1) then
     for y = 1, h do
       for x = 1, w do
         gpu.setBackground(0x000000)

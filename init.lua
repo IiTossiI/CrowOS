@@ -27,10 +27,18 @@ while true do
       gpu.set(x, y, " ")
     end
   end
-  gpu.setBackground(0xFFFFFF)
-  gpu.setForeground(0x000000)
-  gpu.fill(1, 1, w, 1, " ")
-  gpu.set(2, 1, "Activities")
+  if (x > 1 and x < 1 + #"Activities" and y == 1) then
+    gpu.setBackground(0xFFFFFF)
+    gpu.setForeground(0x000000)
+    gpu.fill(1, 1, w, 1, " ")
+    gpu.setBackground(0x0000FF)
+    gpu.set(2, 1, "Activities")
+  else
+    gpu.setBackground(0xFFFFFF)
+    gpu.setForeground(0x000000)
+    gpu.fill(1, 1, w, 1, " ")
+    gpu.set(2, 1, "Activities")
+  end
   gpu.setBackground(0x0000FF)
   gpu.setForeground(0xFFFFFF)
   gpu.set(2, h - 1, "MONITOR 1")

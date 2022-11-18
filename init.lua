@@ -42,6 +42,9 @@ while true do
         gpu.set(x, y, utf8.char(x + y * w))
       end
     end
+  else
+    gpu.setBackground(0x000000)
+    gpu.fill(1, 1, w, h, " ")
   end
   if (x > 1 and x < (1 + #"Programs") and y == 1) then
     gpu.setBackground(0xFFFFFF)

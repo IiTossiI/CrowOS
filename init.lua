@@ -15,8 +15,9 @@ function new_window(x, y, w, h)
   gpu.set(x, y, id)
 end
 new_window(2, 2, 12, 4)
+gpu.setBackground(0xFFFFFF)
 gpu.setForeground(0x000000)
-gpu.set(2, 4, "Starting CrowOS...")
+gpu.set(3, 4, "Starting CrowOS...")
 os.sleep(10)
 for y = 1, h do
   for x = 1, w do

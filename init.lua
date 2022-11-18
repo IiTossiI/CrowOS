@@ -27,7 +27,7 @@ while true do
       gpu.set(x, y, " ")
     end
   end
-  if (x > 1 and x < 1 + #"Activities" and y == 1) then
+  if (x > 1 and x < (1 + #"Activities") and y == 1) then
     gpu.setBackground(0xFFFFFF)
     gpu.setForeground(0x000000)
     gpu.fill(1, 1, w, 1, " ")

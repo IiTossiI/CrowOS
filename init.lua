@@ -5,6 +5,7 @@ local id = computer.address
 print("Using " .. id .. " as computer address!")
 os.sleep(1)
 local gpu = c.gpu
+gpu.setResolution(gpu.maxResolution())
 local w, h = gpu.getResolution()
 function new_window(x, y, w, h)
   w = #id

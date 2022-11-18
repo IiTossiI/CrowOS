@@ -11,6 +11,7 @@ function new_window(x, y, w, h)
   gpu.setBackground(0xFFFFFF)
   gpu.fill(x, y, w, h, " ")
   gpu.setBackground(0xAAAAAA)
+  gpu.setForeground(0xFFFFFF)
   gpu.fill(x, y, w, 1, " ")
   gpu.set(x, y, id)
 end

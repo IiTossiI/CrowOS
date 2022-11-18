@@ -49,7 +49,7 @@ while true do
   end
   gpu.setBackground(0xFF0000)
   gpu.setForeground(0xFFFFFF)
-  gpu.set(w - #"DEMO" - 1, 1, "DEMO")
+  gpu.set(w - #"DEMO VERSION", 1, "DEMO VERSION")
   gpu.setBackground(0x0000FF)
   gpu.setForeground(0xFFFFFF)
   gpu.set(2, h - 1, "MONITOR 1")

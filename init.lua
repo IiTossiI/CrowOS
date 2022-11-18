@@ -43,5 +43,5 @@ while true do
   gpu.setForeground(0xFFFFFF)
   gpu.set(2, h - 1, "MONITOR 1")
   gpu.set(3 + #"MONITOR 1", h - 1, w .. "x" .. h)
-  local _, _, x, y = event.pull("touch")
+  _, _, x, y = event.pull("touch")
 end

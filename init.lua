@@ -21,6 +21,7 @@ gpu.set(3, 4, "Starting CrowOS...")
 os.sleep(1)
 local event = require("event")
 while true do
+  local _, _, x, y = event.pull("touch")
   for y = 1, h do
     for x = 1, w do
       gpu.setBackground(x + y * 2)
@@ -43,5 +44,4 @@ while true do
   gpu.setForeground(0xFFFFFF)
   gpu.set(2, h - 1, "MONITOR 1")
   gpu.set(3 + #"MONITOR 1", h - 1, w .. "x" .. h)
-  _, _, x, y = event.pull("touch")
 end

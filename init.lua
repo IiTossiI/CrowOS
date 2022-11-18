@@ -26,4 +26,5 @@ for y = 1, h do
   end
 end
 gpu.setBackground(0x0000FF)
+gpu.setForeground(0xFFFFFF)
 gpu.set(2, h - 1, "MONITOR 1")

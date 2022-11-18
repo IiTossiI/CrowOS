@@ -7,7 +7,7 @@ os.sleep(1)
 local gpu = c.gpu
 local w, h = gpu.getResolution()
 function new_window(x, y, w, h)
-  x = #id
+  w = #id
   gpu.setBackground(0xFFFFFF)
   gpu.fill(x, y, w, h, " ")
   gpu.setBackground(0xAAAAAA)

@@ -25,6 +25,7 @@ while true do
   for y = 1, h do
     for x = 1, w do
       gpu.setBackground(x + y * 2)
+      gpu.setForeground(0x000000)
       gpu.set(x, y, string.char(x + y))
     end
   end

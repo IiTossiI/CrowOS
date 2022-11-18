@@ -19,13 +19,16 @@ gpu.setBackground(0xFFFFFF)
 gpu.setForeground(0x000000)
 gpu.set(3, 4, "Starting CrowOS...")
 os.sleep(10)
-for y = 1, h do
-  for x = 1, w do
-    gpu.setBackground(x + y * 2)
-    gpu.set(x, y, " ")
+while true do
+  for y = 1, h do
+    for x = 1, w do
+      gpu.setBackground(x + y * 2)
+      gpu.set(x, y, " ")
+    end
   end
+  gpu.setBackground(0x0000FF)
+  gpu.setForeground(0xFFFFFF)
+  gpu.set(2, h - 1, "MONITOR 1")
+  gpu.set(3 + #"MONITOR 1", h - 1, w .. "x" .. h)
+  local _, _, x, y = event.pull("touch")
 end
-gpu.setBackground(0x0000FF)
-gpu.setForeground(0xFFFFFF)
-gpu.set(2, h - 1, "MONITOR 1")
-gpu.set(3 + #"MONITOR 1", h - 1, w .. "x" .. h)

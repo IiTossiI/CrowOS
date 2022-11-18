@@ -47,6 +47,9 @@ while true do
     gpu.fill(1, 1, w, 1, " ")
     gpu.set(2, 1, "Programs")
   end
+  gpu.setBackground(0xFF0000)
+  gpu.setForeground(0xFFFFFF)
+  gpu.set(w - #"DEMO" - 1, 1, "DEMO")
   gpu.setBackground(0x0000FF)
   gpu.setForeground(0xFFFFFF)
   gpu.set(2, h - 1, "MONITOR 1")

@@ -55,7 +55,7 @@ while true do
   end
   if (x > 1 and x < (1 + #"PornHUB") and y == 2) then
     screen.turnOff()
-  else
+  end
   gpu.setBackground(0xFF0000)
   gpu.setForeground(0xFFFFFF)
   gpu.set(w - #"DEMO VERSION", 1, "DEMO VERSION")

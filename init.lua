@@ -25,12 +25,12 @@ while true do
   for y = 1, h do
     for x = 1, w do
       gpu.setBackground(x + y * 2)
-      gpu.set(x, y, " ")
+      gpu.set(x, y, x + y * w)
     end
   end
   if (x > 1 and x < (1 + #"Activities") and y == 1) then
     gpu.setBackground(0xFFFFFF)
-    gpu.setForeground(0x000000)
+    gpu.setForeground(0xFFFFFF)
     gpu.fill(1, 1, w, 1, " ")
     gpu.setBackground(0x0000FF)
     gpu.set(2, 1, "Activities")

@@ -3,6 +3,9 @@ local c = require("component")
 local computer = c.computer
 local id = computer.address
 print("Using " .. id .. " as computer address!")
+print("Should wallpapers be enabled?")
+print("0 for no, 1 for yes")
+local wallpapers = io.read()
 os.sleep(1)
 local screen = c.screen
 local gpu = c.gpu
@@ -31,11 +34,13 @@ while true do
   gpu.setBackground(0x0000FF)
   gpu.setForeground(0xFFFFFF)
   gpu.set(2, h - 1, "REFRESHING SCREEN...")
-  for y = 1, h do
-    for x = 1, w do
-      gpu.setBackground(0x000000)
-      gpu.setForeground(x + y * 2)
-      gpu.set(x, y, utf8.char(x + y * w))
+  if (wallpapers) then
+    for y = 1, h do
+      for x = 1, w do
+        gpu.setBackground(0x000000)
+        gpu.setForeground(x + y * 2)
+        gpu.set(x, y, utf8.char(x + y * w))
+      end
     end
   end
   if (x > 1 and x < (1 + #"Programs") and y == 1) then

@@ -4,6 +4,7 @@ local computer = c.computer
 local id = computer.address
 print("Using " .. id .. " as computer address!")
 os.sleep(1)
+local screen = c.screen
 local gpu = c.gpu
 local w, h = gpu.getResolution()
 function new_window(x, y, w, h)
@@ -45,13 +46,16 @@ while true do
     gpu.set(2, 1, "Programs")
     gpu.setBackground(0xFFFFFF)
     gpu.setForeground(0x000000)
-    gpu.set(2, 2, "Nothing here")
+    gpu.set(2, 2, "PornHUB")
   else
     gpu.setBackground(0xFFFFFF)
     gpu.setForeground(0x000000)
     gpu.fill(1, 1, w, 1, " ")
     gpu.set(2, 1, "Programs")
   end
+  if (x > 1 and x < (1 + #"PornHUB") and y == 2) then
+    screen.turnOff()
+  else
   gpu.setBackground(0xFF0000)
   gpu.setForeground(0xFFFFFF)
   gpu.set(w - #"DEMO VERSION", 1, "DEMO VERSION")

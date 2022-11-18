@@ -29,17 +29,20 @@ while true do
       gpu.set(x, y, string.char(x + y))
     end
   end
-  if (x > 1 and x < (1 + #"Activities") and y == 1) then
+  if (x > 1 and x < (1 + #"Programs") and y == 1) then
     gpu.setBackground(0xFFFFFF)
     gpu.setForeground(0xFFFFFF)
     gpu.fill(1, 1, w, 1, " ")
     gpu.setBackground(0x0000FF)
-    gpu.set(2, 1, "Activities")
+    gpu.set(2, 1, "Programs")
+    gpu.setBackground(0xFFFFFF)
+    gpu.setForeground(0x000000)
+    gpu.set(2, 2, "Nothing here")
   else
     gpu.setBackground(0xFFFFFF)
     gpu.setForeground(0x000000)
     gpu.fill(1, 1, w, 1, " ")
-    gpu.set(2, 1, "Activities")
+    gpu.set(2, 1, "Programs")
   end
   gpu.setBackground(0x0000FF)
   gpu.setForeground(0xFFFFFF)

@@ -18,7 +18,8 @@ new_window(2, 2, 12, 4)
 gpu.setBackground(0xFFFFFF)
 gpu.setForeground(0x000000)
 gpu.set(3, 4, "Starting CrowOS...")
-os.sleep(10)
+os.sleep(1)
+local event = require("event")
 while true do
   for y = 1, h do
     for x = 1, w do

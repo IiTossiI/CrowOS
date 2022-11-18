@@ -5,7 +5,6 @@ local id = computer.address
 print("Using " .. id .. " as computer address!")
 os.sleep(1)
 local gpu = c.gpu
-gpu.setResolution(gpu.maxResolution())
 local w, h = gpu.getResolution()
 function new_window(x, y, w, h)
   w = #id
@@ -23,6 +22,9 @@ os.sleep(1)
 local event = require("event")
 while true do
   local _, _, x, y = event.pull("touch")
+  gpu.setBackground(0x0000FF)
+  gpu.setForeground(0xFFFFFF)
+  gpu.set(2, h - 1, "REFRESHING SCREEN...")
   for y = 1, h do
     for x = 1, w do
       gpu.setBackground(x + y * 2)

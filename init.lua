@@ -31,12 +31,11 @@ while true do
   gpu.setBackground(0x0000FF)
   gpu.setForeground(0xFFFFFF)
   gpu.set(2, h - 1, "REFRESHING SCREEN...")
-  for y = 1, h - 1 do
+  for y = 1, h do
     for x = 1, w do
-      y = y + 1
       gpu.setBackground(0x000000)
       gpu.setForeground(x + y * 2)
-      gpu.set(x, y, utf8.char(x + y))
+      gpu.set(x, y, utf8.char(x + y * w))
     end
   end
   if (x > 1 and x < (1 + #"Programs") and y == 1) then

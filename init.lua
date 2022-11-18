@@ -21,7 +21,7 @@ gpu.set(3, 4, "Starting CrowOS...")
 os.sleep(10)
 for y = 1, h do
   for x = 1, w do
-    gpu.setBackground(x + y)
+    gpu.setBackground(x + y * 8)
     gpu.set(x, y, " ")
   end
 end

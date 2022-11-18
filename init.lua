@@ -33,8 +33,8 @@ while true do
   gpu.set(2, h - 1, "REFRESHING SCREEN...")
   for y = 1, h do
     for x = 1, w do
-      gpu.setBackground(x + y * 2)
-      gpu.setForeground(0x000000)
+      gpu.setBackground(0x000000)
+      gpu.setForeground(x + y * 2)
       gpu.set(x, y, string.char(x + y))
     end
   end

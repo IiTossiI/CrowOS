@@ -72,9 +72,14 @@ while true do
     gpu.setBackground(0xAAAAAA)
     gpu.fill(2, 3, 64, 1, " ")
     gpu.set(2, 3, "Text Editor")
+    gpu.setBackground(0xFF0000)
+    gpu.set(66, 3, "X")
     gpu.setBackground(0xFFFFFF)
     term.setCursor(2, 4)
     io.read()
+  end
+  if (x == 66 and y == 3) then
+    notepad = false
   end
   gpu.setBackground(0xFF0000)
   gpu.setForeground(0xFFFFFF)

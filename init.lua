@@ -66,11 +66,12 @@ while true do
     notepad = true
   end
   if (notepad) then
-    gpu.setBackground(0xAAAAAA)
+    gpu.setBackground(0xFFFFFF)
     gpu.setForeground(0x000000)
+    gpu.fill(2, 4, 64, 16, " ")
+    gpu.setBackground(0xAAAAAA)
     gpu.set(2, 3, "Text Editor")
     gpu.setBackground(0xFFFFFF)
-    gpu.fill(2, 4, 64, 16, " ")
     term.setCursor(2, 4)
     io.read()
   end

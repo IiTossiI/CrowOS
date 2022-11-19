@@ -69,7 +69,7 @@ while true do
       if (keyboard.keys[y] ~= "back") then
         notepad_text = notepad_text .. keyboard.keys[y]
       else
-        notepad_text = notepad_text.sub(1, -2)
+        notepad_text = notepad_text:sub(1, -2)
       end
     end
   end

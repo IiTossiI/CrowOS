@@ -27,7 +27,7 @@ local event = require("event")
 local fs = require("filesystem")
 local notepad = false
 local f = fs.open("/home/notepad.txt")
-local notepad_text = f:read()
+local notepad_text = f:read(64)
 f:close()
 local keyboard = require("keyboard")
 new_window(2, 2, 12, 4)

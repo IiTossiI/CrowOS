@@ -30,7 +30,7 @@ new_window(2, 2, 12, 4)
 gpu.setBackground(0xFFFFFF)
 gpu.setForeground(0x000000)
 gpu.set(3, 4, "CrowOS has started! Click to continue")
-function main()
+while true do
   local e, _, x, y = event.pullFiltered("touch", "key_down")
   gpu.setBackground(0x0000FF)
   gpu.setForeground(0xFFFFFF)

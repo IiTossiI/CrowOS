@@ -23,14 +23,13 @@ new_window(2, 2, 12, 4)
 gpu.setBackground(0xFFFFFF)
 gpu.setForeground(0x000000)
 gpu.set(3, 4, "Starting CrowOS...")
-os.sleep(1)
 local event = require("event")
+local notepad = false
+local term = require("term")
 new_window(2, 2, 12, 4)
 gpu.setBackground(0xFFFFFF)
 gpu.setForeground(0x000000)
 gpu.set(3, 4, "CrowOS has started! Click to continue")
-local notepad = false
-local event = require("event")
 while true do
   local _, _, x, y = event.pull("touch")
   gpu.setBackground(0x0000FF)

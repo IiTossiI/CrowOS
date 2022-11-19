@@ -75,7 +75,7 @@ while true do
         notepad_text = notepad_text:sub(1, -2)
       end
       local f = fs.open("/home/notepad.txt", "w")
-      f:write(#notepad_text, notepad_text)
+      f:write(0, notepad_text)
       f:close()
     end
   end

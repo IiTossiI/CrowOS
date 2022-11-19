@@ -25,7 +25,8 @@ gpu.setForeground(0x000000)
 gpu.set(3, 4, "Starting CrowOS...")
 local event = require("event")
 local notepad = false
-local term = require("term")
+local notepad_text = ""
+local keyboard = require("keyboard")
 new_window(2, 2, 12, 4)
 gpu.setBackground(0xFFFFFF)
 gpu.setForeground(0x000000)
@@ -64,6 +65,13 @@ while true do
   end
   if ((e == "touch" and x > 1 and x < (1 + #"Text Editor") and y == 2) or e == "key_down") then
     notepad = true
+    if (e == "key_down") then
+      if (keyboard.keys[y] ~= "back") then
+        notepad_text = notepad_text .. keyboard.keys[y]
+      else
+        notepad_text = notepad.text.sub(1, #notepad_text - 1)
+      end
+    end
   end
   if (e == "touch" and x == 65 and y == 3) then
     notepad = false
@@ -78,8 +86,7 @@ while true do
     gpu.setBackground(0xFF0000)
     gpu.set(65, 3, "X")
     gpu.setBackground(0xFFFFFF)
-    term.setCursor(2, 4)
-    io.read()
+    gpu.set(2, 4, notepad_text)
   end
   gpu.setBackground(0xFF0000)
   gpu.setForeground(0xFFFFFF)

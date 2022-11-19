@@ -74,6 +74,9 @@ while true do
       else
         notepad_text = notepad_text:sub(1, -2)
       end
+      local f = fs.open("/home/notepad.txt", "w")
+      f.write(notepad_text)
+      f.close()
     end
   end
   if (e == "touch" and x == 65 and y == 3) then

@@ -65,6 +65,9 @@ while true do
   if (x > 1 and x < (1 + #"Text Editor") and y == 2) then
     notepad = true
   end
+  if (x == 65 and y == 3) then
+    notepad = false
+  end
   if (notepad) then
     gpu.setBackground(0xFFFFFF)
     gpu.setForeground(0x000000)
@@ -77,9 +80,6 @@ while true do
     gpu.setBackground(0xFFFFFF)
     term.setCursor(2, 4)
     io.read()
-  end
-  if (x == 66 and y == 3) then
-    notepad = false
   end
   gpu.setBackground(0xFF0000)
   gpu.setForeground(0xFFFFFF)

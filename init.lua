@@ -31,7 +31,7 @@ gpu.setBackground(0xFFFFFF)
 gpu.setForeground(0x000000)
 gpu.set(3, 4, "CrowOS has started! Click to continue")
 while true do
-  local _, _, x, y = event.pull("touch")
+  local e, _, x, y = event.pull()
   gpu.setBackground(0x0000FF)
   gpu.setForeground(0xFFFFFF)
   gpu.set(2, h - 1, "REFRESHING SCREEN...")
@@ -47,7 +47,7 @@ while true do
     gpu.setBackground(0x000000)
     gpu.fill(1, 1, w, h, " ")
   end
-  if (x > 1 and x < (1 + #"Programs") and y == 1) then
+  if (e == "touch" and x > 1 and x < (1 + #"Programs") and y == 1) then
     gpu.setBackground(0xFFFFFF)
     gpu.setForeground(0xFFFFFF)
     gpu.fill(1, 1, w, 1, " ")
@@ -62,10 +62,10 @@ while true do
     gpu.fill(1, 1, w, 1, " ")
     gpu.set(2, 1, "Programs")
   end
-  if (x > 1 and x < (1 + #"Text Editor") and y == 2) then
+  if ((e == "touch" and x > 1 and x < (1 + #"Text Editor") and y == 2) or e == "key_down") then
     notepad = true
   end
-  if (x == 65 and y == 3) then
+  if (e == "touch" and x == 65 and y == 3) then
     notepad = false
   end
   if (notepad) then

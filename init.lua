@@ -30,6 +30,7 @@ gpu.setBackground(0xFFFFFF)
 gpu.setForeground(0x000000)
 gpu.set(3, 4, "CrowOS has started! Click to continue")
 local notepad = false
+local event = require("event")
 while true do
   local _, _, x, y = event.pull("touch")
   gpu.setBackground(0x0000FF)

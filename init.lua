@@ -68,7 +68,7 @@ while true do
   if (notepad) then
     gpu.setBackground(0xFFFFFF)
     gpu.setForeground(0x000000)
-    gpu.fill(2, 4, 64, 16, " ")
+    gpu.fill(2, 3, 64, 16, " ")
     gpu.setBackground(0xAAAAAA)
     gpu.set(2, 3, "Text Editor")
     gpu.setBackground(0xFFFFFF)

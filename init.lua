@@ -24,7 +24,7 @@ gpu.setBackground(0xFFFFFF)
 gpu.setForeground(0x000000)
 gpu.set(3, 4, "Starting CrowOS...")
 local event = require("event")
-local fs = require("fs")
+local fs = require("filesystem")
 local notepad = false
 local f = fs.open("/home/notepad.txt")
 local notepad_text = f.read()

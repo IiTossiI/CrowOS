@@ -29,6 +29,7 @@ new_window(2, 2, 12, 4)
 gpu.setBackground(0xFFFFFF)
 gpu.setForeground(0x000000)
 gpu.set(3, 4, "CrowOS has started! Click to continue")
+local notepad = false
 while true do
   local _, _, x, y = event.pull("touch")
   gpu.setBackground(0x0000FF)
@@ -54,15 +55,24 @@ while true do
     gpu.set(2, 1, "Programs")
     gpu.setBackground(0xFFFFFF)
     gpu.setForeground(0x000000)
-    gpu.set(2, 2, "PornHUB")
+    gpu.set(2, 2, "Text Editor")
   else
     gpu.setBackground(0xFFFFFF)
     gpu.setForeground(0x000000)
     gpu.fill(1, 1, w, 1, " ")
     gpu.set(2, 1, "Programs")
   end
-  if (x > 1 and x < (1 + #"PornHUB") and y == 2) then
-    screen.turnOff()
+  if (x > 1 and x < (1 + #"Text Editor") and y == 2) then
+    notepad = true
+  end
+  if (notepad) then
+    gpu.setBackground(0xAAAAAA)
+    gpu.setForeground(0x000000)
+    gpu.set(2, 3, "Text Editor")
+    gpu.setBackground(0xFFFFFF)
+    gpu.fill(2, 4, 64, 16)
+    term.setCursor(2, 3)
+    io.read()
   end
   gpu.setBackground(0xFF0000)
   gpu.setForeground(0xFFFFFF)

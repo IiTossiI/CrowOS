@@ -70,6 +70,7 @@ while true do
     gpu.setForeground(0x000000)
     gpu.fill(2, 3, 64, 16, " ")
     gpu.setBackground(0xAAAAAA)
+    gpu.fill(2, 3, 64, 1, " ")
     gpu.set(2, 3, "Text Editor")
     gpu.setBackground(0xFFFFFF)
     term.setCursor(2, 4)

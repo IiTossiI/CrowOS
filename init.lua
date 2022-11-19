@@ -87,5 +87,5 @@ while true do
   gpu.setBackground(0x0000FF)
   gpu.setForeground(0xFFFFFF)
   gpu.set(2, h - 1, "MONITOR 1")
-  gpu.set(3 + #"MONITOR 1", h - 1, w .. "x" .. h)
+  gpu.set(3 + #"MONITOR 1", h - 1, x .. "x" .. y)
 end

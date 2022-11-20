@@ -69,10 +69,12 @@ while true do
   if ((e == "touch" and x > 1 and x < (1 + #"Text Editor") and y == 2) or e == "key_down") then
     notepad = true
     if (e == "key_down") then
-      if (keyboard.keys[y] ~= "back") then
-        notepad_text = notepad_text .. keyboard.keys[y]
-      else
+      if (keyboard.keys[y] == "back") then
         notepad_text = notepad_text:sub(1, -2)
+      elseif (keyboard.keys[y] == "space") then
+        notepad_text = notepad_text .. " "
+      else
+        notepad_text = notepad_text .. keyboard.keys[y]
       end
       local f = fs.open("/home/notepad.txt", "w")
       f:write(notepad_text, notepad_text)

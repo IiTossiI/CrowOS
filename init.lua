@@ -74,7 +74,7 @@ while true do
       elseif (keyboard.keys[y] == "space") then
         notepad_text = notepad_text .. " "
       else
-          notepad_text = notepad_text .. keyboard.keys[y]
+        notepad_text = notepad_text .. keyboard.keys[y]
       end
       local f = fs.open("/home/notepad.txt", "w")
       f:write(notepad_text, notepad_text)

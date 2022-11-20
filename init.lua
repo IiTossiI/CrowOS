@@ -75,7 +75,7 @@ while true do
         notepad_text = notepad_text .. " "
       else
         if (keyboard.isShiftDown()) then
-          if (keyboard.keys[y] == "lshift") then
+          if (keyboard.keys[y] ~= "lshift") then
             notepad_text = notepad_text .. keyboard.keys[y].upper()
           end
         else

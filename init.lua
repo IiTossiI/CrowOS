@@ -74,7 +74,11 @@ while true do
       elseif (keyboard.keys[y] == "space") then
         notepad_text = notepad_text .. " "
       else
-        notepad_text = notepad_text .. keyboard.keys[y]
+        if (keyboard.isShiftDown()) then
+          notepad_text = notepad_text .. keyboard.keys[y].upper()
+        else
+          notepad_text = notepad_text .. keyboard.keys[y]
+        end
       end
       local f = fs.open("/home/notepad.txt", "w")
       f:write(notepad_text, notepad_text)

@@ -1,14 +1,14 @@
-print("Initializing CrowOS...")
+print("Starting components...")
 local c = require("component")
 local computer = c.computer
 local id = computer.address
 print("Using " .. id .. " as computer address!")
-print("Should wallpapers be enabled?")
-print("0 for no, 1 for yes")
-local wallpapers = io.read()
+local wallpapers = 0
 os.sleep(1)
+print("Starting gpusrv...")
 local screen = c.screen
 local gpu = c.gpu
+print("Initializing UI...")
 local w, h = gpu.getResolution()
 function new_window(x, y, w, h)
   w = #id

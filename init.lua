@@ -1,7 +1,7 @@
 fs = require("filesystem")
 net = require("internet")
 fs.remove("/home/init.lua")
-f = net.request("https://crowos.glitch.me")
+f = net.request("https://crowos.glitch.me/main.lua")
 result = ""
 for line in f do
   result = result .. line .. "\n"

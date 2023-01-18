@@ -1,2 +1,3 @@
-filesystem.remove("/home/init.lua")
+fs = require("filesystem")
+fs.remove("/home/init.lua")
 print("Shit works")

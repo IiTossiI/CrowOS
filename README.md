@@ -10,4 +10,4 @@ Make sure your are using OpenOS!
 
 Then run this command
 
-    cd /home/ && wget raw.githubusercontent.com/IiTossiI/CrowOS/main/install.lua
+    cd /home/ && wget raw.githubusercontent.com/IiTossiI/CrowOS/main/install.lua && install.lua
